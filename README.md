@@ -1,7 +1,6 @@
 # Git Learning
 
-![image](https://user-images.githubusercontent.com/55266110/111055744-fcdf4580-8446-11eb-8898-86b311ece8a4.png)
-
+![task_completed](/images/completed.jpg)
 ## commit 
 
 `git commit`

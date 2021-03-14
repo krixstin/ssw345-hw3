@@ -1,4 +1,7 @@
 # Git Learning
+
+![image](https://user-images.githubusercontent.com/55266110/111055744-fcdf4580-8446-11eb-8898-86b311ece8a4.png)
+
 ## commit 
 
 `git commit`
@@ -7,7 +10,7 @@
 `git branch newImage`  `git commit` :  * (head) will be on new commit
 
 `git branch newImage`  `git check out newImage` `git commit` : main stays on previous commit & new branch move out with *
-branch early and branch often
+
 
 `git checkout -b [yourbranchname]`
  shortcut: if you want to create a new branch AND check it out at the same time
@@ -56,4 +59,39 @@ In order to reverse changes and share those reversed changes with others
 `git cherry-pick <commit1> <commit2> <...>`  to copy a series of commits below your current location (HEAD)
 ### you don't know what commits you wnat?
 `rebase` `-i`
-`git rebase -i HEAD~4`
+`git rebase -i HEAD~4`: on current HEAD, want to add commits to HEAD~4 
+
+## juggling
+reorder: `git rebase -i`
+modify: `git commit --amend`
+re-order the commits back: `git rebase -i`
+
+## tag
+`git tag v1 C1`
+
+## describe
+Git describe can help you get your bearings after you've moved many commits backwards or forwards in history; this can happen after you've completed a git bisect (a debugging search) or when sitting down at a coworkers computer who just got back from vacation
+
+`git describe <ref>` (if ref not specfified, git uses HEAD)
+output: <tag>_<numCommits>_g<hash>
+ 
+ 
+ <tag> closest anchor tag in history
+ 
+ <numCommits> how many commits away that tag is
+ 
+ <hash> has of the commit being described
+ 
+ ## rebasing multiple branches
+ 
+## multiple bases
+`git checkout main^2`
+
+
+`git checkout` `HEAD` + `HEAD^2` + `HEAD~2` can be written
+`git checkout HEAD~^2~2`
+
+# Remote
+
+## git clone
+
